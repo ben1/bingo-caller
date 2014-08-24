@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6945F2FE-E5DE-4BBF-BAA9-AA75A2768BC7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CUnit</RootNamespace>
+    <AssemblyName>CU_MDX_Text</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animation.cs" />
+    <Compile Include="Caller.cs" />
+    <Compile Include="lib\DeviceOptionsDialog.cs" />
+    <Compile Include="lib\font\BitmapFont.cs" />
+    <Compile Include="lib\font\FontQuad.cs" />
+    <Compile Include="lib\Framework.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib\Framework.Designer.cs">
+      <DependentUpon>Framework.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameApp.cs" />
+    <Compile Include="lib\Camera.cs" />
+    <Compile Include="lib\font\Font.cs" />
+    <Compile Include="lib\Framework.Input.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lib\FrameworkState.cs" />
+    <Compile Include="lib\Graphics.cs" />
+    <Compile Include="lib\gui\Button.cs" />
+    <Compile Include="lib\gui\CheckBox.cs" />
+    <Compile Include="lib\gui\ComboBox.cs" />
+    <Compile Include="lib\gui\EditBox.cs" />
+    <Compile Include="lib\gui\Label.cs" />
+    <Compile Include="lib\gui\ListableItem.cs" />
+    <Compile Include="lib\gui\Control.cs" />
+    <Compile Include="lib\gui\GuiManager.cs" />
+    <Compile Include="lib\gui\ListBox.cs" />
+    <Compile Include="lib\gui\Panel.cs" />
+    <Compile Include="lib\gui\RadioButton.cs" />
+    <Compile Include="lib\gui\Slider.cs" />
+    <Compile Include="lib\Quad.cs" />
+    <Compile Include="lib\Mesh.cs" />
+    <Compile Include="lib\NativeMethods.cs" />
+    <Compile Include="lib\Sprite.cs" />
+    <Compile Include="lib\StateManager.cs" />
+    <Compile Include="lib\Terrain.cs" />
+    <Compile Include="lib\Timer.cs" />
+    <Compile Include="lib\TriangleStripPlane.cs" />
+    <Compile Include="lib\Utility.cs" />
+    <Compile Include="lib\Vertex.cs" />
+    <Compile Include="lib\WorldTransform.cs" />
+    <Compile Include="NumObj.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="lib\Framework.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Framework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="media\CUnit.tga" />
+    <None Include="media\numeffect.fx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TextObj.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="media\CUnit.xml" />
+    <Content Include="media\logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
